@@ -1,0 +1,10 @@
+[ { "model": "movies.genre", "pk": 1, "fields": { "name": "Action", "description": "Action-packed movies filled with adventure and stunts."
+        }
+    },
+    { "model": "movies.genre", "pk": 2, "fields": { "name": "Drama", "description": "Movies with emotional and life-altering stories."
+        }
+    },
+    { "model": "movies.genre", "pk": 3, "fields": { "name": "Comedy", "description": "Movies designed to make you laugh."
+        }
+    }
+]

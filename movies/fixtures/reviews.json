@@ -1,0 +1,13 @@
+[ { "model": "movies.review", "pk": 1, "fields": { "user": 1, "movie": 1, "content": "An incredible movie! Highly recommended.", "rating": 10, "created_at": 
+            "2023-01-01T12:34:56Z"
+        }
+    },
+    { "model": "movies.review", "pk": 2, "fields": { "user": 2, "movie": 2, "content": "A timeless classic that you must watch.", "rating": 10, "created_at": 
+            "2023-02-01T14:20:00Z"
+        }
+    },
+    { "model": "movies.review", "pk": 3, "fields": { "user": 3, "movie": 3, "content": "A great kids movie with a lot of humor.", "rating": 8, "created_at": 
+            "2023-03-10T18:00:00Z"
+        }
+    }
+]

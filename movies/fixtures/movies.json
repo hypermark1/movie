@@ -1,0 +1,32 @@
+[
+    {
+        "model": "movies.movie",
+        "pk": 1,
+        "fields": {
+            "title": "Inception",
+            "description": "A mind-bending thriller by Christopher Nolan.",
+            "release_date": "2010-07-16",
+            "poster": null
+        }
+    },
+    {
+        "model": "movies.movie",
+        "pk": 2,
+        "fields": {
+            "title": "The Godfather",
+            "description": "The story of the Corleone family.",
+            "release_date": "1972-03-24",
+            "poster": null
+        }
+    },
+    {
+        "model": "movies.movie",
+        "pk": 3,
+        "fields": {
+            "title": "Toy Story",
+            "description": "A story about sentient toys and their adventures.",
+            "release_date": "1995-11-22",
+            "poster": null
+        }
+    }
+]

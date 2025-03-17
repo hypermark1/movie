@@ -1,0 +1,10 @@
+[ { "model": "movies.rating", "pk": 1, "fields": { "user": 1, "movie": 1, "score": 9
+        }
+    },
+    { "model": "movies.rating", "pk": 2, "fields": { "user": 1, "movie": 2, "score": 10
+        }
+    },
+    { "model": "movies.rating", "pk": 3, "fields": { "user": 2, "movie": 3, "score": 8
+        }
+    }
+]
