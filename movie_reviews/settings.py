@@ -33,13 +33,31 @@ ALLOWED_HOSTS = config("ALLOWED_HOSTS", default="").split(",")
 # Application definition
 
 INSTALLED_APPS = [
+    # Local apps
+    'users.apps.UsersConfig',
+    'movies.apps.MoviesConfig',
+    'reviews.apps.ReviewsConfig',
+    'favorites.apps.FavoritesConfig',
+    
+    # Django apps
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'movies',
+    'django.contrib.sites',
+    
+    # Third party apps
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'crispy_forms',
+    'crispy_bootstrap5',
+    'django_filters',
+    'django_tables2',
+    'widget_tweaks',
+    'debug_toolbar',
 ]
 
 MIDDLEWARE = [
@@ -50,6 +68,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'allauth.account.middleware.AccountMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 ROOT_URLCONF = 'movie_reviews.urls'
@@ -134,3 +154,26 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Custom user model
+AUTH_USER_MODEL = 'users.User'
+
+# Crispy Forms
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
+
+# Django Tables2
+DJANGO_TABLES2_TEMPLATE = "django_tables2/bootstrap5.html"
+
+# Cache settings
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.redis.RedisCache',
+        'LOCATION': 'redis://redis:6379/1',
+    }
+}
+
+# Rate limiting settings
+RATE_LIMIT = {
+    'REVIEW_SUBMISSION': 300,  # 5 minutes
+}
